@@ -4,7 +4,7 @@ class GamesController < ApplicationController
     @games = Game.all
   end
 
-  def update 
+  def update
     @game = Game.find(params[:id])
     @game.update(state: params[:state])
     render json: @game, status: 201
@@ -19,5 +19,5 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     render json: @game, status: 200
   end
-  
+
 end
